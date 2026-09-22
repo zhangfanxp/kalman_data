@@ -1,0 +1,5 @@
+# 现有清洗脚本仍仅使用 Python 标准库；nq_imm_kalman.py 需要以下库。
+numpy>=1.26,<3
+pandas>=2.1,<4
+matplotlib>=3.8,<4
+gradio>=5.0,<7

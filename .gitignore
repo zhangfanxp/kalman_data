@@ -1,0 +1,62 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging and build output
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs and local environment files
+*.log
+.env
+.env.*
+!.env.example
+
+# Temporary files and local databases created during processing
+*.tmp
+*.sqlite
+*.sqlite3
+*.db
+
+# Market data and generated analysis artifacts
+# These files can be hundreds of MB; keep them outside normal Git history.
+*.csv
+*.png
+*.svg
+
+# Project data/output directories
+input/
+output/
+clean_csv/
+5min/
+Data_view/
+Chart/

@@ -1,0 +1,72 @@
+{
+  "input_path": "raw-1m.csv",
+  "output_path": "clean_csv/raw_1m_clean01.csv",
+  "required_columns": [
+    "ts_event",
+    "rtype",
+    "publisher_id",
+    "instrument_id",
+    "symbol",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume"
+  ],
+  "encoding": "utf-8",
+  "clean02": {
+    "default_input_path": "clean_csv/raw_1m_clean01.csv",
+    "default_output_dir": "clean_csv",
+    "download_start_utc": "2010-06-06 22:00:00+00:00",
+    "download_end_utc": "2026-07-20 23:59:00+00:00"
+  },
+  "clean03": {
+    "default_input_path": "clean_csv/raw_1m_clean01_clean02.csv",
+    "default_output_dir": "clean_csv",
+    "future_definition_values": ["FUTURE", "FUTURES", "FUT"],
+    "option_definition_values": ["OPTION", "OPTIONS", "OPT"]
+  },
+  "clean04": {
+    "default_input_path": "clean_csv/raw_1m_clean01_clean02_clean03.csv",
+    "default_output_dir": "clean_csv",
+    "group_columns": ["publisher_id", "instrument_id", "symbol"]
+  },
+  "clean05": {
+    "default_input_path": "clean_csv/raw_1m_clean01_clean02_clean03_clean04.csv",
+    "default_output_dir": "clean_csv",
+    "timestamp_column": "ts_utc"
+  },
+  "clean06": {
+    "default_input_path": "clean_csv/raw_1m_clean01_clean02_clean03_clean04_clean05.csv",
+    "default_output_dir": "clean_csv",
+    "timestamp_column": "ts_utc"
+  },
+  "clean07": {
+    "default_input_path": "clean_csv/raw_1m_clean01_clean02_clean03_clean04_clean05_clean06.csv",
+    "default_output_dir": "clean_csv"
+  },
+  "clean08": {
+    "default_input_path": "clean_csv/raw_1m_clean01_clean02_clean03_clean04_clean05_clean06_clean07.csv",
+    "default_output_dir": "clean_csv"
+  },
+  "clean09": {
+    "default_input_path": "clean_csv/raw_1m_clean01_clean02_clean03_clean04_clean05_clean06_clean07_clean08.csv",
+    "default_output_dir": "clean_csv",
+    "tick_size": "0.25",
+    "tick_tolerance": "0.000001"
+  },
+  "clean10": {
+    "default_input_path": "clean_csv/raw_1m_clean01_clean02_clean03_clean04_clean05_clean06_clean07_clean08_clean09.csv",
+    "default_output_dir": "clean_csv"
+  },
+  "clean11": {
+    "default_input_path": "clean_csv/raw_1m_clean01_clean02_clean03_clean04_clean05_clean06_clean07_clean08_clean09_clean10.csv",
+    "default_output_dir": "clean_csv"
+  },
+  "clean12": {
+    "default_input_path": "clean_csv/raw_1m_clean01_clean02_clean03_clean04_clean05_clean06_clean07_clean08_clean09_clean10_clean11.csv",
+    "default_output_dir": "clean_csv",
+    "large_up_down_output_path": "clean_csv/Large_up_down.csv",
+    "return_threshold_pct": "1.0"
+  }
+}
